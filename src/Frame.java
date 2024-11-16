@@ -40,7 +40,7 @@ public class Frame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
         this.add(txtPanel);
-//        this.getContentPane().setBackground(new Color(6, 6, 35, 255)); remove it!
+        this.getContentPane().setBackground(new Color(6, 6, 35, 255));
 
 //        this.pack();
     }
