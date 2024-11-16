@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -13,6 +14,22 @@ public class Frame extends JFrame {
         txtPanel.setBackground(new Color(6, 6, 35, 255));
         txtPanel.setBounds(0, 80, 550, 160);
         txtPanel.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1));
+
+        // Create Text Area within the panel
+        JTextArea area = new JTextArea("This is the dialog that will show with a bunch of words.");
+        area.setBounds(0, 0, 200, 200);
+        txtPanel.add(area);
+
+        // Create button when clicked to change text of Text Area "area"
+        JButton b = new JButton("Click Here");
+        b.setBounds(100, 0, 100, 50);
+        b.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                area.setText("This is a test.");
+            }
+        });
+        this.add(b);
+
 
         //creating and managing main frame
         this.setTitle("RPG Game");
